@@ -1,0 +1,21 @@
+# Vercel ignore file
+# Ignore intermediate/raw PDF page extractions and duplicate root assets
+assets/
+extracted_assets/
+page_*.png
+p19_raw_topright.png
+p1_2.png
+logo_badge.png
+*.txt
+
+# Dev & Git
+.git
+node_modules
+.vscode
+.idea
+*.log
+video_frame_*.jpg
+crop_test_*.jpg
+crop_inpainted.jpg
+logo_crop.jpg
+test_*.mp4
