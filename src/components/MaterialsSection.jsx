@@ -16,7 +16,7 @@ export default function MaterialsSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="eyebrow justify-center">MATERIEL & METROLOGY</span>
-          <h2 className="serif-display text-4xl sm:text-6xl md:text-7xl text-[#f5f3ee] leading-[1.04]">
+          <h2 className="serif-display text-3xl sm:text-5xl md:text-7xl text-[#f5f3ee] leading-[1.1] sm:leading-[1.04]">
             WHERE MATERIAL
             <br />
             <span className="text-[#c5a265] italic font-normal">BECOMES</span> DETAIL.
@@ -35,7 +35,7 @@ export default function MaterialsSection() {
                 key={step.phase}
                 type="button"
                 onClick={() => setActiveStep(idx)}
-                className={`text-left p-5 md:p-6 transition-all duration-300 border flex flex-col justify-between min-h-[140px] relative ${
+                className={`text-left p-4 sm:p-5 md:p-6 transition-all duration-300 border flex flex-col justify-between min-h-[120px] sm:min-h-[140px] relative ${
                   isActive
                     ? 'bg-[#1e1d1b] border-[#c5a265] shadow-xl shadow-black/50'
                     : 'bg-[#171615] border-white/[0.06] hover:border-white/20'

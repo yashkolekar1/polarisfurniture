@@ -14,7 +14,7 @@ export default function Capabilities({ onOpenInquiry }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-white/[0.08] pb-10">
           <div>
             <span className="eyebrow">COMPREHENSIVE TURN-KEY PORTFOLIO</span>
-            <h2 className="serif-display text-4xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-tight">
+            <h2 className="serif-display text-3xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-[1.1] sm:leading-tight">
               SIX SPECIALIZED
               <br />
               <span className="text-[#c5a265] italic font-normal">MANUFACTURING</span> DISCIPLINES.
@@ -185,7 +185,7 @@ export default function Capabilities({ onOpenInquiry }) {
                       transition={{ duration: 0.35, ease: 'easeInOut' }}
                       className="overflow-hidden pt-4"
                     >
-                      <div className="relative min-h-[200px] aspect-[16/10] overflow-hidden border border-white/[0.08] mb-4 bg-[#141414]">
+                      <div className="relative min-h-[220px] sm:min-h-[280px] aspect-[16/10] overflow-hidden border border-white/[0.08] mb-4 bg-[#141414]">
                         <img
                           src={item.image}
                           alt={item.title}

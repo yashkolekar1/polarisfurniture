@@ -27,15 +27,16 @@ export default function Footer({ onOpenInquiry }) {
   return (
     <footer id="contact" className="bg-[#080807] text-[#f5f3ee] border-t border-white/[0.08] relative">
       {/* Contact Section Block */}
-      <div className="container py-20 border-b border-white/[0.08]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="container py-14 sm:py-20 border-b border-white/[0.08]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Brand Info */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-5 sm:space-y-6">
             <div className="flex items-center gap-3">
               <img
                 src="/assets/logo/polaris-emblem.png"
                 alt="Polaris Emblem"
                 className="w-10 h-10 object-contain"
+                decoding="async"
               />
               <div>
                 <span className="font-serif text-2xl tracking-[0.2em] text-[#f5f3ee] block leading-none">
@@ -55,7 +56,7 @@ export default function Footer({ onOpenInquiry }) {
               <button
                 type="button"
                 onClick={onOpenInquiry}
-                className="btn-primary !py-3 !px-6 text-xs"
+                className="btn-primary !py-3.5 !px-6 text-xs w-full sm:w-auto justify-center"
               >
                 <span>INITIATE PROJECT ENQUIRY</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

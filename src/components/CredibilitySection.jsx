@@ -13,7 +13,7 @@ export default function CredibilitySection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 border-b border-white/[0.08] pb-10">
           <div>
             <span className="eyebrow">INTEGRITY & REGULATORY COMPLIANCE</span>
-            <h2 className="serif-display text-4xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-tight">
+            <h2 className="serif-display text-3xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-[1.1] sm:leading-tight">
               STANDARDS WITHOUT
               <br />
               <span className="text-[#c5a265] italic font-normal">COMPROMISE.</span>
@@ -29,7 +29,7 @@ export default function CredibilitySection() {
           {certifications.map((cert) => (
             <div
               key={cert.title}
-              className="bg-[#141414] border border-white/[0.08] p-8 flex flex-col justify-between group hover:border-[#c5a265]/50 transition-colors"
+              className="bg-[#141414] border border-white/[0.08] p-6 sm:p-8 flex flex-col justify-between group hover:border-[#c5a265]/50 transition-colors"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">

@@ -20,7 +20,7 @@ export default function FacilitySection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
           <div>
             <span className="eyebrow">INTEGRATED 45,000 SQ. FT. PLANT</span>
-            <h2 className="serif-display text-4xl sm:text-6xl md:text-7xl text-[#f5f3ee] leading-[1.04]">
+            <h2 className="serif-display text-3xl sm:text-5xl md:text-7xl text-[#f5f3ee] leading-[1.1] sm:leading-[1.04]">
               THE SCALE
               <br />
               <span className="text-[#c5a265] italic font-normal">BEHIND</span> THE CRAFT.
@@ -59,19 +59,19 @@ export default function FacilitySection() {
       </div>
 
       {/* Horizontal Cinematic Facility Sequence */}
-      <div className="w-full pl-6 md:pl-12 lg:pl-20">
+      <div className="w-full px-4 sm:px-6 md:pl-12 lg:pl-20">
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto pb-8 pt-2 scrollbar-none snap-x snap-mandatory"
+          className="flex gap-4 sm:gap-6 overflow-x-auto pb-8 pt-2 scrollbar-none snap-x snap-mandatory"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {workflow.map((item, idx) => (
             <div
               key={item.label}
-              className="min-w-[300px] sm:min-w-[420px] md:min-w-[500px] snap-start flex flex-col group border border-white/[0.08] bg-[#141414]"
+              className="min-w-[270px] sm:min-w-[380px] md:min-w-[480px] snap-start flex flex-col group border border-white/[0.08] bg-[#141414]"
             >
               {/* Facility Image with subtle zoom */}
-              <div className="relative min-h-[190px] aspect-[16/10] overflow-hidden bg-[#0c0c0b]">
+              <div className="relative min-h-[180px] sm:min-h-[220px] aspect-[16/10] overflow-hidden bg-[#0c0c0b]">
                 <img
                   src={item.image}
                   alt={`Polaris facility ${item.label}`}

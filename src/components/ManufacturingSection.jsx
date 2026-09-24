@@ -43,7 +43,7 @@ export default function ManufacturingSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <span className="eyebrow">INDUSTRIAL SCALE & PRECISION</span>
-            <h2 className="serif-display text-4xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-[1.05]">
+            <h2 className="serif-display text-3xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-[1.1] sm:leading-[1.05]">
               BUILT TO MANUFACTURE.
               <br />
               <span className="text-[#c5a265] italic font-normal">ENGINEERED</span> TO DELIVER.
@@ -55,7 +55,7 @@ export default function ManufacturingSection() {
         </div>
 
         {/* Large Stat Feature Banner */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#171615] border border-white/[0.08] p-8 md:p-12 mb-16 relative overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#171615] border border-white/[0.08] p-6 sm:p-8 md:p-12 mb-16 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#c5a265]/5 rounded-full blur-3xl pointer-events-none" />
 
           {/* Left: Giant Industrial Stat */}
@@ -63,13 +63,13 @@ export default function ManufacturingSection() {
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#c5a265] mb-2">
               PURPOSE-BUILT INFRASTRUCTURE
             </span>
-            <div className="serif-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#f5f3ee] tracking-tight leading-none mb-3">
+            <div className="serif-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#f5f3ee] tracking-tight leading-none mb-3">
               45,000
             </div>
-            <div className="text-xl sm:text-2xl font-serif text-[#c5a265] tracking-wider mb-2">
+            <div className="text-lg sm:text-2xl font-serif text-[#c5a265] tracking-wider mb-2">
               SQ. FT. MANUFACTURING FACILITY
             </div>
-            <div className="text-xs sm:text-sm tracking-[0.2em] uppercase text-[#9e9a91] font-sans">
+            <div className="text-[11px] sm:text-sm tracking-[0.16em] sm:tracking-[0.2em] uppercase text-[#9e9a91] font-sans">
               DUBAI INVESTMENT PARK (DIP 2) • UAE
             </div>
           </div>

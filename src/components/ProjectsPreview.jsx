@@ -18,7 +18,7 @@ export default function ProjectsPreview({ onOpenInquiry }) {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 border-b border-white/[0.08] pb-10">
           <div>
             <span className="eyebrow">PORTFOLIO EXCELLENCE</span>
-            <h2 className="serif-display text-4xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-tight">
+            <h2 className="serif-display text-3xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-[1.1] sm:leading-tight">
               SELECTED PROJECTS.
             </h2>
             <p className="text-sm md:text-base text-[#9e9a91] font-light max-w-lg mt-3 leading-relaxed">
@@ -200,7 +200,7 @@ export default function ProjectsPreview({ onOpenInquiry }) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-[#171615] border border-white/10 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative p-6 sm:p-8"
+              className="bg-[#171615] border border-white/10 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative p-5 sm:p-8"
             >
               <button
                 type="button"

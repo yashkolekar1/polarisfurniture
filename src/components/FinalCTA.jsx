@@ -28,22 +28,22 @@ export default function FinalCTA({ onOpenInquiry }) {
       <div className="container relative z-10 text-center max-w-4xl mx-auto">
         <span className="eyebrow justify-center">ENGAGE OUR ATELIER</span>
 
-        <h2 className="serif-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#f5f3ee] leading-[1.03] tracking-tight mb-8">
+        <h2 className="serif-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-[#f5f3ee] leading-[1.08] sm:leading-[1.03] tracking-tight mb-6 sm:mb-8">
           LET'S BUILD SOMETHING
           <br />
           <span className="text-[#c5a265] italic font-normal">WORTH</span> REMEMBERING.
         </h2>
 
-        <p className="text-base sm:text-lg md:text-xl text-[#9e9a91] font-light max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="text-sm sm:text-lg md:text-xl text-[#9e9a91] font-light max-w-2xl mx-auto mb-10 sm:mb-12 leading-relaxed">
           From precision manufacturing to complete interior fit-out, bring your next hospitality, commercial, or luxury residential project to Polaris.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-5">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-5 w-full sm:w-auto mx-auto max-w-xs sm:max-w-none">
           <button
             type="button"
             onClick={onOpenInquiry}
-            className="btn-primary !py-4 !px-8 text-sm"
+            className="btn-primary !py-3.5 !px-6 sm:!py-4 sm:!px-8 text-xs sm:text-sm justify-center"
           >
             <span>START A PROJECT</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -52,7 +52,7 @@ export default function FinalCTA({ onOpenInquiry }) {
           <a
             href="#contact"
             onClick={scrollToContact}
-            className="btn-outline !py-4 !px-8 text-sm group"
+            className="btn-outline !py-3.5 !px-6 sm:!py-4 sm:!px-8 text-xs sm:text-sm group justify-center"
           >
             <span>CONTACT POLARIS</span>
             <ArrowUpRight className="w-4 h-4 text-[#c5a265] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

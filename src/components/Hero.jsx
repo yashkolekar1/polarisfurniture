@@ -68,7 +68,6 @@ export default function Hero({ onOpenInquiry }) {
     <section
       id="hero"
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#0c0c0b]"
-      style={{ minHeight: '100vh' }}
     >
       {/* ========================================================================= */}
       {/* CINEMATIC VIDEO BACKGROUND WITH POSTER FALLBACK                            */}
@@ -78,7 +77,7 @@ export default function Hero({ onOpenInquiry }) {
         style={{
           backgroundImage: "url('/assets/hero/hero-master-cinematic.jpg')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center center'
         }}
       >
         <div className="hero-video-wrapper">
@@ -89,7 +88,7 @@ export default function Hero({ onOpenInquiry }) {
             loop
             playsInline
             webkit-playsinline="true"
-            preload="auto"
+            preload="metadata"
             poster="/assets/hero/hero-master-cinematic.jpg"
             className="w-full h-full object-cover"
           >
@@ -113,7 +112,9 @@ export default function Hero({ onOpenInquiry }) {
       </div>
 
       {/* Main Hero Content */}
-      <div className="container relative z-10 pt-32 pb-20 md:py-32 flex flex-col justify-between min-h-screen">
+      <div
+        className="container relative z-10 pt-28 pb-12 sm:pt-32 sm:pb-16 md:py-32 flex flex-col justify-between min-h-screen"
+      >
         <div />
 
         <div className="max-w-4xl">
@@ -133,9 +134,9 @@ export default function Hero({ onOpenInquiry }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-2 mb-6"
+            className="mt-2 mb-5 sm:mb-6"
           >
-            <h1 className="serif-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#f5f3ee] tracking-tight leading-[1.02]">
+            <h1 className="serif-display text-[2.2rem] sm:text-5xl md:text-7xl lg:text-8xl text-[#f5f3ee] tracking-tight leading-[1.08] sm:leading-[1.02]">
               WE MANUFACTURE
               <br />
               <span className="text-[#c5a265] italic font-normal">THE SPACES</span> YOU IMAGINE.
@@ -147,7 +148,7 @@ export default function Hero({ onOpenInquiry }) {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="text-base sm:text-lg md:text-xl text-[#9e9a91] font-light max-w-2xl leading-relaxed mb-10"
+            className="text-sm sm:text-base md:text-lg text-[#9e9a91] font-light max-w-2xl leading-relaxed mb-8 sm:mb-10"
           >
             Integrated furniture manufacturing and interior fit-out solutions, crafted in Dubai for projects across the GCC and beyond.
           </motion.p>
@@ -157,12 +158,12 @@ export default function Hero({ onOpenInquiry }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-wrap items-center gap-4 sm:gap-6"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6 w-full sm:w-auto"
           >
             <button
               type="button"
               onClick={() => scrollToSection('capabilities')}
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto justify-center"
             >
               <span>EXPLORE CAPABILITIES</span>
               <ArrowDown className="w-4 h-4" />
@@ -171,7 +172,7 @@ export default function Hero({ onOpenInquiry }) {
             <button
               type="button"
               onClick={onOpenInquiry}
-              className="btn-outline group"
+              className="btn-outline group w-full sm:w-auto justify-center"
             >
               <span>START A PROJECT</span>
               <ArrowUpRight className="w-4 h-4 text-[#c5a265] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -184,7 +185,7 @@ export default function Hero({ onOpenInquiry }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="pt-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-t border-white/[0.08]"
+          className="pt-8 sm:pt-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 border-t border-white/[0.08]"
         >
           {/* Video Status & Manufacturing Meta */}
           <div className="flex items-center gap-5">
