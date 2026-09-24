@@ -16,7 +16,7 @@ export default function MaterialsSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="eyebrow justify-center">MATERIEL & METROLOGY</span>
-          <h2 className="serif-display text-3xl sm:text-5xl md:text-7xl text-[#f5f3ee] leading-[1.1] sm:leading-[1.04]">
+          <h2 className="editorial-headline-xl text-[#f5f3ee] tracking-tight">
             WHERE MATERIAL
             <br />
             <span className="text-[#c5a265] italic font-normal">BECOMES</span> DETAIL.

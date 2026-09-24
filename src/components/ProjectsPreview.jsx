@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, MapPin, Layers, X, Sparkles } from 'lucide-react';
 import { projectsData, projectCategories } from '../data/projects';
@@ -6,6 +6,17 @@ import { projectsData, projectCategories } from '../data/projects';
 export default function ProjectsPreview({ onOpenInquiry }) {
   const [activeCategory, setActiveCategory] = useState('ALL');
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    if (!selectedProject) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setSelectedProject(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedProject]);
 
   const filteredProjects = activeCategory === 'ALL'
     ? projectsData
@@ -18,7 +29,7 @@ export default function ProjectsPreview({ onOpenInquiry }) {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 border-b border-white/[0.08] pb-10">
           <div>
             <span className="eyebrow">PORTFOLIO EXCELLENCE</span>
-            <h2 className="serif-display text-3xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-[1.1] sm:leading-tight">
+            <h2 className="editorial-headline-xl text-[#f5f3ee] tracking-tight">
               SELECTED PROJECTS.
             </h2>
             <p className="text-sm md:text-base text-[#9e9a91] font-light max-w-lg mt-3 leading-relaxed">
@@ -194,6 +205,9 @@ export default function ProjectsPreview({ onOpenInquiry }) {
           <div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
             onClick={() => setSelectedProject(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="project-lightbox-title"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -230,7 +244,7 @@ export default function ProjectsPreview({ onOpenInquiry }) {
                   </span>
                 </div>
 
-                <h3 className="serif-display text-3xl sm:text-4xl text-[#f5f3ee]">
+                <h3 id="project-lightbox-title" className="serif-display text-3xl sm:text-4xl text-[#f5f3ee]">
                   {selectedProject.title}
                 </h3>
 

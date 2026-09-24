@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, ArrowRight, ShieldCheck } from 'lucide-react';
 
@@ -13,6 +13,17 @@ export default function ProjectModal({ isOpen, onClose }) {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -30,6 +41,9 @@ export default function ProjectModal({ isOpen, onClose }) {
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md overflow-y-auto"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tender-inquiry-title"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -52,7 +66,7 @@ export default function ProjectModal({ isOpen, onClose }) {
           <div>
             <div className="mb-8">
               <span className="eyebrow">ESTIMATE & TENDER INQUIRY</span>
-              <h3 className="serif-display text-3xl sm:text-4xl text-[#f5f3ee]">
+              <h3 id="tender-inquiry-title" className="serif-display text-3xl sm:text-4xl text-[#f5f3ee]">
                 START A PROJECT WITH POLARIS.
               </h3>
               <p className="text-xs sm:text-sm text-[#9e9a91] font-light mt-2 leading-relaxed">

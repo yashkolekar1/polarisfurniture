@@ -28,7 +28,7 @@ export default function FinalCTA({ onOpenInquiry }) {
       <div className="container relative z-10 text-center max-w-4xl mx-auto">
         <span className="eyebrow justify-center">ENGAGE OUR ATELIER</span>
 
-        <h2 className="serif-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-[#f5f3ee] leading-[1.08] sm:leading-[1.03] tracking-tight mb-6 sm:mb-8">
+        <h2 className="editorial-headline-hero text-[#f5f3ee] tracking-tight mb-6 sm:mb-8">
           LET'S BUILD SOMETHING
           <br />
           <span className="text-[#c5a265] italic font-normal">WORTH</span> REMEMBERING.

@@ -22,7 +22,7 @@ export default function GlobalPresence() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20 border-b border-white/[0.08] pb-10">
           <div>
             <span className="eyebrow">EXPANDING OUR GLOBAL FOOTPRINT</span>
-            <h2 className="serif-display text-4xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-tight">
+            <h2 className="editorial-headline-xl text-[#f5f3ee] tracking-tight">
               STRATEGIC OFFICES &
               <br />
               <span className="text-[#c5a265] italic font-normal">LANDMARK</span> DESTINATIONS.

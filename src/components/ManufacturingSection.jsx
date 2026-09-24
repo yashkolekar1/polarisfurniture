@@ -43,7 +43,7 @@ export default function ManufacturingSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <span className="eyebrow">INDUSTRIAL SCALE & PRECISION</span>
-            <h2 className="serif-display text-3xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-[1.1] sm:leading-[1.05]">
+            <h2 className="editorial-headline-xl text-[#f5f3ee] tracking-tight">
               BUILT TO MANUFACTURE.
               <br />
               <span className="text-[#c5a265] italic font-normal">ENGINEERED</span> TO DELIVER.

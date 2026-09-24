@@ -16,7 +16,7 @@ export default function IntroSection() {
           {/* Left Column: Large Editorial Heading */}
           <div className="lg:col-span-7">
             <span className="eyebrow">COMPANY PROFILE & INTRODUCTION</span>
-            <h2 className="serif-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#f5f3ee] leading-[1.1] sm:leading-[1.08] tracking-tight">
+            <h2 className="editorial-headline-xl text-[#f5f3ee] tracking-tight">
               WE DON'T JUST MAKE FURNITURE.
               <br />
               <span className="text-[#c5a265] italic font-normal">WE MANUFACTURE</span> COMPLETE INTERIOR SOLUTIONS.

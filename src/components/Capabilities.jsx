@@ -14,7 +14,7 @@ export default function Capabilities({ onOpenInquiry }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-white/[0.08] pb-10">
           <div>
             <span className="eyebrow">COMPREHENSIVE TURN-KEY PORTFOLIO</span>
-            <h2 className="serif-display text-3xl sm:text-5xl md:text-6xl text-[#f5f3ee] leading-[1.1] sm:leading-tight">
+            <h2 className="editorial-headline-xl text-[#f5f3ee] tracking-tight">
               SIX SPECIALIZED
               <br />
               <span className="text-[#c5a265] italic font-normal">MANUFACTURING</span> DISCIPLINES.

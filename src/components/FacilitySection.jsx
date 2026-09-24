@@ -20,7 +20,7 @@ export default function FacilitySection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
           <div>
             <span className="eyebrow">INTEGRATED 45,000 SQ. FT. PLANT</span>
-            <h2 className="serif-display text-3xl sm:text-5xl md:text-7xl text-[#f5f3ee] leading-[1.1] sm:leading-[1.04]">
+            <h2 className="editorial-headline-xl text-[#f5f3ee] tracking-tight">
               THE SCALE
               <br />
               <span className="text-[#c5a265] italic font-normal">BEHIND</span> THE CRAFT.

@@ -7,30 +7,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* Editorial Palette */
-  --bg-dark: #0c0c0b;
-  --bg-charcoal: #121110;
-  --bg-surface: #171615;
-  --bg-surface-elevated: #1e1d1b;
+  /* Standardized Polaris Corporate Palette */
+  --color-black: #0c0c0b;
+  --color-charcoal: #121110;
+  --color-surface: #171615;
+  --color-surface-elevated: #1e1d1b;
+  --color-ivory: #f5f3ee;
+  --color-muted: #9e9a91;
+  --color-subtle: #6e6a62;
+  
+  --color-bronze: #c5a265;
+  --color-bronze-light: #dfc28d;
+  --color-bronze-dark: #9e7d44;
+  --color-bronze-border: rgba(197, 162, 101, 0.3);
+
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-medium: rgba(255, 255, 255, 0.14);
+
+  /* Aliased Variables for Backwards Compatibility */
+  --bg-dark: var(--color-black);
+  --bg-charcoal: var(--color-charcoal);
+  --bg-surface: var(--color-surface);
+  --bg-surface-elevated: var(--color-surface-elevated);
   --bg-ivory: #faf8f5;
 
-  --text-primary: #f5f3ee;
-  --text-muted: #9e9a91;
-  --text-subtle: #6e6a62;
+  --text-primary: var(--color-ivory);
+  --text-muted: var(--color-muted);
+  --text-subtle: var(--color-subtle);
   
-  --bronze: #c5a265;
-  --bronze-light: #dfc28d;
-  --bronze-dark: #9e7d44;
-  --bronze-border: rgba(197, 162, 101, 0.3);
+  --bronze: var(--color-bronze);
+  --bronze-light: var(--color-bronze-light);
+  --bronze-dark: var(--color-bronze-dark);
+  --bronze-border: var(--color-bronze-border);
 
-  --border-light: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-light: var(--color-border);
+  --border-medium: var(--color-border-medium);
 
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   --container-max: 1480px;
   --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessible Focus States */
+:focus-visible {
+  outline: 2px solid var(--color-bronze);
+  outline-offset: 3px;
 }
 
 /* Reset & Defaults */
@@ -142,6 +175,38 @@ button, input, select, textarea {
   font-family: var(--font-serif);
   font-weight: 300;
   letter-spacing: -0.015em;
+}
+
+.editorial-headline-hero {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.2rem, 6.2vw + 0.4rem, 5.6rem);
+  line-height: 1.03;
+}
+
+.editorial-headline-xl {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  font-size: clamp(1.95rem, 4.8vw + 0.4rem, 4.1rem);
+  line-height: 1.06;
+}
+
+.editorial-headline-lg {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  font-size: clamp(1.7rem, 3.6vw + 0.3rem, 3.1rem);
+  line-height: 1.1;
+}
+
+.editorial-headline-md {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.3rem, 2.2vw + 0.25rem, 2rem);
+  line-height: 1.2;
 }
 
 .eyebrow {

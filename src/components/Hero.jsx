@@ -136,7 +136,7 @@ export default function Hero({ onOpenInquiry }) {
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="mt-2 mb-5 sm:mb-6"
           >
-            <h1 className="serif-display text-[2.2rem] sm:text-5xl md:text-7xl lg:text-8xl text-[#f5f3ee] tracking-tight leading-[1.08] sm:leading-[1.02]">
+            <h1 className="editorial-headline-hero text-[#f5f3ee] tracking-tight">
               WE MANUFACTURE
               <br />
               <span className="text-[#c5a265] italic font-normal">THE SPACES</span> YOU IMAGINE.
