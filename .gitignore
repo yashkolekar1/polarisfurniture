@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Raw intermediate PDF page dumps (already curated in public/assets/)
+page_*.png
+extracted_assets/
+
+# Temporary test frames and scratch files
+video_frame_*.jpg
+crop_test_*.jpg
+crop_inpainted.jpg
+logo_crop.jpg
+test_*.mp4
