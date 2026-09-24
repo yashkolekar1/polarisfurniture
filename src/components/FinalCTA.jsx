@@ -15,13 +15,14 @@ export default function FinalCTA({ onOpenInquiry }) {
   return (
     <section className="relative py-28 md:py-40 bg-[#080807] text-[#f5f3ee] overflow-hidden border-t border-white/[0.08]">
       {/* Cinematic Background Image with Gradient Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-[#080807]">
         <img
           src="/assets/facility/facility-floor-wide.jpg"
           alt="Polaris Manufacturing Plant at Scale"
-          className="w-full h-full object-cover filter brightness-[0.25] contrast-125 scale-105"
+          className="w-full h-full object-cover filter brightness-[0.4] contrast-125 scale-105"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080807] via-[#080807]/80 to-[#080807]/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080807] via-[#080807]/70 to-[#080807]/85 pointer-events-none" />
       </div>
 
       <div className="container relative z-10 text-center max-w-4xl mx-auto">

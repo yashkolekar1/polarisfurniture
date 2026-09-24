@@ -107,12 +107,13 @@ export default function MaterialsSection() {
 
           {/* Right: High-Resolution Close-Up Photography */}
           <div className="lg:col-span-6">
-            <div className="relative aspect-square sm:aspect-[4/3] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#0c0c0b]">
+            <div className="relative min-h-[240px] aspect-square sm:aspect-[4/3] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#0c0c0b]">
               <img
                 src={steps[activeStep].image}
                 alt={steps[activeStep].title}
                 className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
                 key={steps[activeStep].phase}
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b]/80 via-transparent to-transparent pointer-events-none" />
               

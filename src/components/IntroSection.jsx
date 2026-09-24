@@ -52,12 +52,12 @@ export default function IntroSection() {
         </div>
 
         {/* Large Cinematic Hero Showcase Image */}
-        <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden group border border-white/[0.08]">
+        <div className="relative w-full min-h-[240px] aspect-[16/9] md:aspect-[21/9] overflow-hidden group border border-white/[0.08] bg-[#0c0c0b]">
           <img
             src="/assets/projects/dubai-hills-villa-2.jpg"
             alt="Polaris architectural joinery and custom interior fit-out"
             className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-transparent to-transparent opacity-80" />
 

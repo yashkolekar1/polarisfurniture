@@ -120,8 +120,31 @@ export default function ManufacturingSection() {
 
         {/* Interactive Production Floor Deep Dive */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left: Tab Selectors */}
-          <div className="lg:col-span-5 space-y-3">
+          {/* Dynamic High-Res Factory Photography (First on mobile for immediate visual impact) */}
+          <div className="lg:col-span-7 order-1 lg:order-2">
+            <div className="relative min-h-[240px] aspect-[4/3] md:aspect-[16/10] overflow-hidden border border-white/[0.08] shadow-2xl bg-[#0c0c0b]">
+              <img
+                src={manufacturingPillars[activePillar].image}
+                alt={manufacturingPillars[activePillar].title}
+                className="w-full h-full object-cover transition-all duration-700 ease-out"
+                key={manufacturingPillars[activePillar].id}
+                decoding="async"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b]/90 via-transparent to-transparent pointer-events-none" />
+              
+              <div className="absolute bottom-6 left-6 right-6">
+                <span className="text-[10px] tracking-[0.25em] uppercase text-[#c5a265] font-semibold block mb-1">
+                  POLARIS INDUSTRIAL SETUP • DUBAI
+                </span>
+                <p className="serif-display text-xl sm:text-2xl text-[#f5f3ee]">
+                  {manufacturingPillars[activePillar].title}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Tab Selectors */}
+          <div className="lg:col-span-5 space-y-3 order-2 lg:order-1">
             <p className="text-xs tracking-[0.2em] uppercase text-[#9e9a91] mb-4 font-semibold">
               CORE MANUFACTURING SECTORS
             </p>
@@ -130,7 +153,7 @@ export default function ManufacturingSection() {
                 key={pillar.id}
                 type="button"
                 onClick={() => setActivePillar(idx)}
-                className={`w-full text-left p-5 transition-all duration-300 border flex flex-col gap-1.5 ${
+                className={`w-full text-left p-4 sm:p-5 transition-all duration-300 border flex flex-col gap-1.5 ${
                   activePillar === idx
                     ? 'bg-[#1e1d1b] border-[#c5a265] shadow-lg shadow-black/40'
                     : 'bg-[#151514] border-white/[0.06] hover:border-white/20'
@@ -152,28 +175,6 @@ export default function ManufacturingSection() {
                 </p>
               </button>
             ))}
-          </div>
-
-          {/* Right: Dynamic High-Res Factory Photography */}
-          <div className="lg:col-span-7">
-            <div className="relative aspect-[4/3] md:aspect-[16/10] overflow-hidden border border-white/[0.08] shadow-2xl bg-[#0c0c0b]">
-              <img
-                src={manufacturingPillars[activePillar].image}
-                alt={manufacturingPillars[activePillar].title}
-                className="w-full h-full object-cover transition-all duration-700 ease-out"
-                key={manufacturingPillars[activePillar].id}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b]/90 via-transparent to-transparent" />
-              
-              <div className="absolute bottom-6 left-6 right-6">
-                <span className="text-[10px] tracking-[0.25em] uppercase text-[#c5a265] font-semibold block mb-1">
-                  POLARIS INDUSTRIAL SETUP • DUBAI
-                </span>
-                <p className="serif-display text-xl sm:text-2xl text-[#f5f3ee]">
-                  {manufacturingPillars[activePillar].title}
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

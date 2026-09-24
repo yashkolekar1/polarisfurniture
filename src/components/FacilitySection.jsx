@@ -71,12 +71,12 @@ export default function FacilitySection() {
               className="min-w-[300px] sm:min-w-[420px] md:min-w-[500px] snap-start flex flex-col group border border-white/[0.08] bg-[#141414]"
             >
               {/* Facility Image with subtle zoom */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-[#0c0c0b]">
+              <div className="relative min-h-[190px] aspect-[16/10] overflow-hidden bg-[#0c0c0b]">
                 <img
                   src={item.image}
                   alt={`Polaris facility ${item.label}`}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute top-4 left-4 bg-[#0c0c0b]/80 backdrop-blur-md px-3 py-1 border border-white/10 text-[10px] font-mono tracking-widest text-[#c5a265]">
                   STAGE {item.step}

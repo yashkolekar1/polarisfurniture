@@ -60,6 +60,27 @@ img, video {
   display: block;
 }
 
+img.object-cover, video.object-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: scale(1.04);
+  transform-origin: center center;
+}
+
+@media (min-width: 768px) {
+  .hero-video-wrapper {
+    transform: scale(1.16);
+    transform-origin: top left;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -617,13 +638,22 @@ button, input, select, textarea {
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops, transparent));
 }
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops, transparent));
+}
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops, transparent));
+}
 .from-\[\#0c0c0b\] { --tw-gradient-from: #0c0c0b; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
 .from-\[\#080807\] { --tw-gradient-from: #080807; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
 .from-\[\#141414\] { --tw-gradient-from: #141414; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
 .via-\[\#0c0c0b\]\/40 { --tw-gradient-stops: var(--tw-gradient-from), rgba(12, 12, 11, 0.4), var(--tw-gradient-to, transparent); }
+.via-\[\#0c0c0b\]\/45 { --tw-gradient-stops: var(--tw-gradient-from), rgba(12, 12, 11, 0.45), var(--tw-gradient-to, transparent); }
 .via-\[\#0c0c0b\]\/55 { --tw-gradient-stops: var(--tw-gradient-from), rgba(12, 12, 11, 0.55), var(--tw-gradient-to, transparent); }
+.via-\[\#0c0c0b\]\/75 { --tw-gradient-stops: var(--tw-gradient-from), rgba(12, 12, 11, 0.75), var(--tw-gradient-to, transparent); }
 .via-\[\#080807\]\/80 { --tw-gradient-stops: var(--tw-gradient-from), rgba(8, 8, 7, 0.8), var(--tw-gradient-to, transparent); }
 .to-transparent { --tw-gradient-to: transparent; }
+.to-\[\#0c0c0b\]\/30 { --tw-gradient-to: rgba(12, 12, 11, 0.3); }
 .to-\[\#0c0c0b\]\/40 { --tw-gradient-to: rgba(12, 12, 11, 0.4); }
 .to-\[\#080807\]\/90 { --tw-gradient-to: rgba(8, 8, 7, 0.9); }
 

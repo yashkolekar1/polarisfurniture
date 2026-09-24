@@ -51,13 +51,13 @@ export default function ProjectsPreview({ onOpenInquiry }) {
           {filteredProjects.length > 0 && (
             <div
               onClick={() => setSelectedProject(filteredProjects[0])}
-              className="md:col-span-12 lg:col-span-8 group relative aspect-[16/10] overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b]"
+              className="md:col-span-12 lg:col-span-8 group relative min-h-[220px] aspect-[16/10] overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b]"
             >
               <img
                 src={filteredProjects[0].image}
                 alt={filteredProjects[0].title}
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-[#0c0c0b]/40 to-transparent" />
 
@@ -97,13 +97,13 @@ export default function ProjectsPreview({ onOpenInquiry }) {
           {filteredProjects.length > 1 && (
             <div
               onClick={() => setSelectedProject(filteredProjects[1])}
-              className="md:col-span-12 lg:col-span-4 group relative aspect-[16/10] lg:aspect-auto overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b] flex flex-col justify-end"
+              className="md:col-span-12 lg:col-span-4 group relative min-h-[240px] aspect-[16/10] lg:aspect-auto overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b] flex flex-col justify-end"
             >
               <img
                 src={filteredProjects[1].image}
                 alt={filteredProjects[1].title}
                 className="w-full h-full object-cover absolute inset-0 transition-transform duration-1000 ease-out group-hover:scale-105"
-                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-[#0c0c0b]/40 to-transparent" />
 
@@ -137,13 +137,13 @@ export default function ProjectsPreview({ onOpenInquiry }) {
             <div
               key={proj.id}
               onClick={() => setSelectedProject(proj)}
-              className="md:col-span-6 lg:col-span-4 group relative aspect-[4/3] overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b]"
+              className="md:col-span-6 lg:col-span-4 group relative min-h-[200px] aspect-[4/3] overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b]"
             >
               <img
                 src={proj.image}
                 alt={proj.title}
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-[#0c0c0b]/40 to-transparent" />
 
@@ -211,11 +211,12 @@ export default function ProjectsPreview({ onOpenInquiry }) {
                 <X className="w-6 h-6" />
               </button>
 
-              <div className="relative aspect-[16/9] w-full overflow-hidden mb-6 border border-white/10">
+              <div className="relative aspect-[16/9] w-full overflow-hidden mb-6 border border-white/10 bg-[#0c0c0b]">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
                   className="w-full h-full object-cover"
+                  decoding="async"
                 />
               </div>
 

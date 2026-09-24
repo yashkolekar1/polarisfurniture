@@ -7,16 +7,42 @@ export default function Hero({ onOpenInquiry }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.defaultMuted = true;
-      videoRef.current.muted = true;
-      const playPromise = videoRef.current.play();
+    const video = videoRef.current;
+    if (video) {
+      video.defaultMuted = true;
+      video.muted = true;
+      video.setAttribute('playsinline', 'true');
+      video.setAttribute('webkit-playsinline', 'true');
+      video.setAttribute('muted', '');
+      
+      const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise
           .then(() => setIsPlaying(true))
-          .catch(() => setIsPlaying(false));
+          .catch(() => {
+            // Autoplay restricted on mobile until first user touch
+            setIsPlaying(false);
+          });
       }
     }
+
+    // Mobile fallback: enable playback on first user tap/touch/scroll
+    const handleFirstInteraction = () => {
+      if (videoRef.current && videoRef.current.paused) {
+        videoRef.current
+          .play()
+          .then(() => setIsPlaying(true))
+          .catch(() => {});
+      }
+    };
+
+    window.addEventListener('touchstart', handleFirstInteraction, { once: true, passive: true });
+    window.addEventListener('click', handleFirstInteraction, { once: true, passive: true });
+
+    return () => {
+      window.removeEventListener('touchstart', handleFirstInteraction);
+      window.removeEventListener('click', handleFirstInteraction);
+    };
   }, []);
 
   const toggleVideoPlayback = () => {
@@ -45,37 +71,37 @@ export default function Hero({ onOpenInquiry }) {
       style={{ minHeight: '100vh' }}
     >
       {/* ========================================================================= */}
-      {/* CINEMATIC VIDEO BACKGROUND (Watermark/Gemini logo strictly eliminated)    */}
+      {/* CINEMATIC VIDEO BACKGROUND WITH POSTER FALLBACK                            */}
       {/* ========================================================================= */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Dual-layer watermark elimination:
-            1. polaris-hero-loop.mp4 has the bottom-right corner cropped at frame level
-            2. CSS scale(1.12) with transformOrigin 'top left' guarantees zero edge visibility */}
-        <div
-          className="w-full h-full relative"
-          style={{
-            transform: 'scale(1.16)',
-            transformOrigin: 'top left'
-          }}
-        >
+      <div
+        className="absolute inset-0 z-0 overflow-hidden bg-[#0c0c0b]"
+        style={{
+          backgroundImage: "url('/assets/hero/hero-master-cinematic.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="hero-video-wrapper">
           <video
             ref={videoRef}
             autoPlay
             muted
             loop
             playsInline
+            webkit-playsinline="true"
+            preload="auto"
             poster="/assets/hero/hero-master-cinematic.jpg"
             className="w-full h-full object-cover"
           >
-            <source src="/assets/videos/hero-video.mp4" type="video/mp4" />
             <source src="/assets/videos/polaris-hero-loop.mp4" type="video/mp4" />
+            <source src="/assets/videos/hero-video.mp4" type="video/mp4" />
           </video>
         </div>
 
         {/* Cinematic Vignette Overlays for Text Legibility & Architectural Mood */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0c0c0b] via-[#0c0c0b]/75 to-transparent pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-[#0c0c0b]/45 to-[#0c0c0b]/30 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_40%,rgba(12,12,11,0.2)_0%,rgba(12,12,11,0.85)_100%)] pointer-events-none" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-[#0c0c0b] via-[#0c0c0b]/75 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-[#0c0c0b]/55 to-[#0c0c0b]/30 pointer-events-none" />
+        <div className="absolute inset-0 hidden md:block bg-[radial-gradient(circle_at_25%_40%,rgba(12,12,11,0.2)_0%,rgba(12,12,11,0.85)_100%)] pointer-events-none" />
 
         {/* Architectural Grid Lines */}
         <div className="absolute inset-0 pointer-events-none opacity-20">

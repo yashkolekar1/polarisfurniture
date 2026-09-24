@@ -40,12 +40,12 @@ export default function CredibilitySection() {
                 </div>
 
                 {/* Certificate Scan from Company Profile */}
-                <div className="relative aspect-[3/4] overflow-hidden bg-white/5 border border-white/10 mb-6">
+                <div className="relative min-h-[180px] aspect-[3/4] overflow-hidden bg-white/5 border border-white/10 mb-6">
                   <img
                     src={cert.image}
                     alt={cert.title}
                     className="w-full h-full object-contain p-2 filter contrast-105"
-                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -136,7 +136,7 @@ export default function CredibilitySection() {
                   src={brand.logo}
                   alt={brand.name}
                   className="max-h-12 max-w-[85%] object-contain filter grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
-                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}

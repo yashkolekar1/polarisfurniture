@@ -108,6 +108,7 @@ export default function Capabilities({ onOpenInquiry }) {
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out scale-105"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-[#0c0c0b]/40 to-transparent" />
 
@@ -148,23 +149,31 @@ export default function Capabilities({ onOpenInquiry }) {
                 <button
                   type="button"
                   onClick={() => setMobileExpanded(isOpen ? -1 : idx)}
-                  className="w-full flex items-center justify-between text-left group"
+                  className="w-full flex items-center justify-between text-left group gap-3"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3 sm:gap-4 flex-1">
                     <span className="text-xs font-mono text-[#c5a265]">{item.id}</span>
                     <h3
-                      className={`serif-display text-xl sm:text-2xl transition-colors ${
+                      className={`serif-display text-lg sm:text-2xl transition-colors ${
                         isOpen ? 'text-[#c5a265]' : 'text-[#f5f3ee]'
                       }`}
                     >
                       {item.title}
                     </h3>
                   </div>
-                  <ChevronDown
-                    className={`w-5 h-5 text-[#c5a265] transition-transform duration-300 ${
-                      isOpen ? 'rotate-180' : ''
-                    }`}
-                  />
+                  <div className="flex items-center gap-3 shrink-0">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-9 h-9 object-cover rounded-none border border-white/10"
+                      decoding="async"
+                    />
+                    <ChevronDown
+                      className={`w-4 h-4 text-[#c5a265] transition-transform duration-300 ${
+                        isOpen ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </div>
                 </button>
 
                 <AnimatePresence>
@@ -176,11 +185,12 @@ export default function Capabilities({ onOpenInquiry }) {
                       transition={{ duration: 0.35, ease: 'easeInOut' }}
                       className="overflow-hidden pt-4"
                     >
-                      <div className="relative aspect-[16/10] overflow-hidden border border-white/[0.08] mb-4">
+                      <div className="relative min-h-[200px] aspect-[16/10] overflow-hidden border border-white/[0.08] mb-4 bg-[#141414]">
                         <img
                           src={item.image}
                           alt={item.title}
                           className="w-full h-full object-cover"
+                          decoding="async"
                         />
                       </div>
                       <p className="text-xs text-[#9e9a91] leading-relaxed mb-4">
