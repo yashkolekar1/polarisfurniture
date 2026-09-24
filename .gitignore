@@ -33,3 +33,5 @@ crop_test_*.jpg
 crop_inpainted.jpg
 logo_crop.jpg
 test_*.mp4
+
+.vercel

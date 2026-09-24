@@ -50,7 +50,7 @@ export default function Hero({ onOpenInquiry }) {
         <div
           className="w-full h-full relative"
           style={{
-            transform: 'scale(1.12)',
+            transform: 'scale(1.16)',
             transformOrigin: 'top left'
           }}
         >
@@ -63,8 +63,8 @@ export default function Hero({ onOpenInquiry }) {
             poster="/assets/hero/hero-master-cinematic.jpg"
             className="w-full h-full object-cover"
           >
-            <source src="/assets/videos/polaris-hero-loop.mp4" type="video/mp4" />
             <source src="/assets/videos/hero-video.mp4" type="video/mp4" />
+            <source src="/assets/videos/polaris-hero-loop.mp4" type="video/mp4" />
           </video>
         </div>
 
