@@ -62,18 +62,18 @@ export default function ProjectsPreview({ onOpenInquiry }) {
           {filteredProjects.length > 0 && (
             <div
               onClick={() => setSelectedProject(filteredProjects[0])}
-              className="md:col-span-12 lg:col-span-8 group relative min-h-[220px] aspect-[16/10] overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b]"
+              className="md:col-span-12 lg:col-span-8 group relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b]"
             >
               <img
                 src={filteredProjects[0].image}
                 alt={filteredProjects[0].title}
-                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                className="w-full h-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-105"
                 decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-[#0c0c0b]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b]/90 via-[#0c0c0b]/30 to-transparent" />
 
               {/* Badges */}
-              <div className="absolute top-6 left-6 flex items-center gap-3">
+              <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-3">
                 <span className="bg-[#c5a265] text-[#0c0c0b] text-[10px] font-semibold tracking-widest uppercase px-2.5 py-1">
                   FEATURED
                 </span>
@@ -83,22 +83,22 @@ export default function ProjectsPreview({ onOpenInquiry }) {
               </div>
 
               {/* Reveal Meta */}
-              <div className="absolute bottom-8 left-8 right-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4">
                 <div className="max-w-xl">
-                  <div className="flex items-center gap-2 text-xs text-[#c5a265] mb-2 font-mono">
+                  <div className="flex items-center gap-2 text-xs text-[#c5a265] mb-1 sm:mb-2 font-mono">
                     <MapPin className="w-3.5 h-3.5" />
                     <span>{filteredProjects[0].location}</span>
                   </div>
-                  <h3 className="serif-display text-2xl sm:text-4xl text-[#f5f3ee] group-hover:text-[#c5a265] transition-colors">
+                  <h3 className="serif-display text-xl sm:text-3xl lg:text-4xl text-[#f5f3ee] group-hover:text-[#c5a265] transition-colors">
                     {filteredProjects[0].title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#9e9a91] font-light mt-2 line-clamp-2">
+                  <p className="text-xs sm:text-sm text-[#9e9a91] font-light mt-1 sm:mt-2 line-clamp-2">
                     {filteredProjects[0].scope}
                   </p>
                 </div>
 
-                <div className="w-12 h-12 rounded-full border border-white/20 bg-[#0c0c0b]/80 group-hover:bg-[#c5a265] group-hover:text-[#0c0c0b] group-hover:border-[#c5a265] flex items-center justify-center transition-all duration-300 shrink-0">
-                  <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 bg-[#0c0c0b]/80 group-hover:bg-[#c5a265] group-hover:text-[#0c0c0b] group-hover:border-[#c5a265] flex items-center justify-center transition-all duration-300 shrink-0 self-end sm:self-auto">
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
               </div>
             </div>
@@ -108,34 +108,34 @@ export default function ProjectsPreview({ onOpenInquiry }) {
           {filteredProjects.length > 1 && (
             <div
               onClick={() => setSelectedProject(filteredProjects[1])}
-              className="md:col-span-12 lg:col-span-4 group relative min-h-[240px] aspect-[16/10] lg:aspect-auto overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b] flex flex-col justify-end"
+              className="md:col-span-12 lg:col-span-4 group relative aspect-[4/3] lg:aspect-auto overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b] flex flex-col justify-end"
             >
               <img
                 src={filteredProjects[1].image}
                 alt={filteredProjects[1].title}
-                className="w-full h-full object-cover absolute inset-0 transition-transform duration-1000 ease-out group-hover:scale-105"
+                className="w-full h-full object-cover object-center absolute inset-0 transition-transform duration-1000 ease-out group-hover:scale-105"
                 decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-[#0c0c0b]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b]/90 via-[#0c0c0b]/30 to-transparent" />
 
-              <div className="absolute top-6 left-6">
+              <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
                 <span className="bg-[#0c0c0b]/80 backdrop-blur-md text-[10px] font-mono tracking-widest text-[#f5f3ee] px-2.5 py-1 border border-white/10">
                   {filteredProjects[1].category}
                 </span>
               </div>
 
-              <div className="relative z-10 p-6 sm:p-8">
-                <div className="flex items-center gap-2 text-xs text-[#c5a265] mb-2 font-mono">
+              <div className="relative z-10 p-4 sm:p-6 lg:p-8">
+                <div className="flex items-center gap-2 text-xs text-[#c5a265] mb-1 sm:mb-2 font-mono">
                   <MapPin className="w-3.5 h-3.5" />
                   <span>{filteredProjects[1].location}</span>
                 </div>
-                <h3 className="serif-display text-2xl text-[#f5f3ee] group-hover:text-[#c5a265] transition-colors">
+                <h3 className="serif-display text-xl sm:text-2xl text-[#f5f3ee] group-hover:text-[#c5a265] transition-colors">
                   {filteredProjects[1].title}
                 </h3>
                 <p className="text-xs text-[#9e9a91] font-light mt-1 line-clamp-2">
                   {filteredProjects[1].scope}
                 </p>
-                <div className="pt-4 flex items-center gap-2 text-xs font-semibold tracking-wider text-[#c5a265] uppercase">
+                <div className="pt-3 sm:pt-4 flex items-center gap-2 text-xs font-semibold tracking-wider text-[#c5a265] uppercase">
                   <span>EXPLORE SCOPE</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </div>
@@ -148,12 +148,12 @@ export default function ProjectsPreview({ onOpenInquiry }) {
             <div
               key={proj.id}
               onClick={() => setSelectedProject(proj)}
-              className="md:col-span-6 lg:col-span-4 group relative min-h-[200px] aspect-[4/3] overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b]"
+              className="md:col-span-6 lg:col-span-4 group relative aspect-[4/3] overflow-hidden border border-white/[0.08] cursor-pointer bg-[#0c0c0b]"
             >
               <img
                 src={proj.image}
                 alt={proj.title}
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b] via-[#0c0c0b]/40 to-transparent" />
@@ -225,11 +225,11 @@ export default function ProjectsPreview({ onOpenInquiry }) {
                 <X className="w-6 h-6" />
               </button>
 
-              <div className="relative aspect-[16/9] w-full overflow-hidden mb-6 border border-white/10 bg-[#0c0c0b]">
+              <div className="relative aspect-[4/3] sm:aspect-[16/10] w-full overflow-hidden mb-6 border border-white/10 bg-[#0c0c0b] flex items-center justify-center">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain sm:object-cover object-center"
                   decoding="async"
                 />
               </div>

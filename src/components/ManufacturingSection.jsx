@@ -122,21 +122,21 @@ export default function ManufacturingSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Dynamic High-Res Factory Photography (First on mobile for immediate visual impact) */}
           <div className="lg:col-span-7 order-1 lg:order-2">
-            <div className="relative min-h-[240px] aspect-[4/3] md:aspect-[16/10] overflow-hidden border border-white/[0.08] shadow-2xl bg-[#0c0c0b]">
+            <div className="relative aspect-[4/3] md:aspect-[16/10] overflow-hidden border border-white/[0.08] shadow-2xl bg-[#0c0c0b]">
               <img
                 src={manufacturingPillars[activePillar].image}
                 alt={manufacturingPillars[activePillar].title}
-                className="w-full h-full object-cover transition-all duration-700 ease-out"
+                className="w-full h-full object-cover object-center transition-all duration-700 ease-out"
                 key={manufacturingPillars[activePillar].id}
                 decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b]/90 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b]/75 via-transparent to-transparent pointer-events-none" />
               
-              <div className="absolute bottom-6 left-6 right-6">
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
                 <span className="text-[10px] tracking-[0.25em] uppercase text-[#c5a265] font-semibold block mb-1">
                   POLARIS INDUSTRIAL SETUP • DUBAI
                 </span>
-                <p className="serif-display text-xl sm:text-2xl text-[#f5f3ee]">
+                <p className="serif-display text-lg sm:text-2xl text-[#f5f3ee]">
                   {manufacturingPillars[activePillar].title}
                 </p>
               </div>

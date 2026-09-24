@@ -161,15 +161,9 @@ export default function Capabilities({ onOpenInquiry }) {
                       {item.title}
                     </h3>
                   </div>
-                  <div className="flex items-center gap-3 shrink-0">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-9 h-9 object-cover rounded-none border border-white/10"
-                      decoding="async"
-                    />
+                  <div className="flex items-center gap-2 shrink-0">
                     <ChevronDown
-                      className={`w-4 h-4 text-[#c5a265] transition-transform duration-300 ${
+                      className={`w-5 h-5 text-[#c5a265] transition-transform duration-300 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
@@ -185,15 +179,16 @@ export default function Capabilities({ onOpenInquiry }) {
                       transition={{ duration: 0.35, ease: 'easeInOut' }}
                       className="overflow-hidden pt-4"
                     >
-                      <div className="relative min-h-[220px] sm:min-h-[280px] aspect-[16/10] overflow-hidden border border-white/[0.08] mb-4 bg-[#141414]">
+                      {/* Full-Width Uncropped Capability Image */}
+                      <div className="w-full overflow-hidden border border-white/[0.08] mb-4 bg-[#141414]">
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain block mx-auto"
                           decoding="async"
                         />
                       </div>
-                      <p className="text-xs text-[#9e9a91] leading-relaxed mb-4">
+                      <p className="text-xs sm:text-sm text-[#9e9a91] leading-relaxed mb-4">
                         {item.description}
                       </p>
                       <div className="space-y-2 mb-4">

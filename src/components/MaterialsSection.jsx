@@ -107,15 +107,15 @@ export default function MaterialsSection() {
 
           {/* Right: High-Resolution Close-Up Photography */}
           <div className="lg:col-span-6">
-            <div className="relative min-h-[240px] aspect-square sm:aspect-[4/3] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#0c0c0b]">
+            <div className="relative aspect-[4/3] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#0c0c0b]">
               <img
                 src={steps[activeStep].image}
                 alt={steps[activeStep].title}
-                className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
+                className="w-full h-full object-cover object-center transition-transform duration-700 ease-out hover:scale-105"
                 key={steps[activeStep].phase}
                 decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b]/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0b]/70 via-transparent to-transparent pointer-events-none" />
               
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[11px] text-[#9e9a91] bg-[#0c0c0b]/70 backdrop-blur-md px-4 py-2 border border-white/[0.06]">
                 <span>ARCHITECTURAL MATERIAL DETAIL</span>

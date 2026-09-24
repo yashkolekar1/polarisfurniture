@@ -70,12 +70,12 @@ export default function FacilitySection() {
               key={item.label}
               className="min-w-[270px] sm:min-w-[380px] md:min-w-[480px] snap-start flex flex-col group border border-white/[0.08] bg-[#141414]"
             >
-              {/* Facility Image with subtle zoom */}
-              <div className="relative min-h-[180px] sm:min-h-[220px] aspect-[16/10] overflow-hidden bg-[#0c0c0b]">
+              {/* Facility Image with natural responsive proportions */}
+              <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-[#0c0c0b]">
                 <img
                   src={item.image}
                   alt={`Polaris facility ${item.label}`}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                   decoding="async"
                 />
                 <div className="absolute top-4 left-4 bg-[#0c0c0b]/80 backdrop-blur-md px-3 py-1 border border-white/10 text-[10px] font-mono tracking-widest text-[#c5a265]">

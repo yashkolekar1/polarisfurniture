@@ -90,7 +90,7 @@ export default function Hero({ onOpenInquiry }) {
             webkit-playsinline="true"
             preload="metadata"
             poster="/assets/hero/hero-master-cinematic.jpg"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           >
             <source src="/assets/videos/polaris-hero-loop.mp4" type="video/mp4" />
             <source src="/assets/videos/hero-video.mp4" type="video/mp4" />
